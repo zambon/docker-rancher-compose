@@ -8,12 +8,12 @@ Got tired of Go 1.6 segfaults in macOS Sierra.
 
     ```shell
     alias rancher-compose="docker run --rm -it \
-      --env \"COMPOSE_FILE=$COMPOSE_FILE\" \
-      --env \"COMPOSE_PROJECT_NAME=$COMPOSE_PROJECT_NAME\" \
-      --env \"RANCHER_URL=$RANCHER_URL\" \
-      --env \"RANCHER_ACCESS_KEY=$RANCHER_ACCESS_KEY\" \
-      --env \"RANCHER_SECRET_KEY=$RANCHER_SECRET_KEY\" \
-      --volume \"$(pwd):/compose\" \
+      --env \"COMPOSE_FILE=\$COMPOSE_FILE\" \
+      --env \"COMPOSE_PROJECT_NAME=\$COMPOSE_PROJECT_NAME\" \
+      --env \"RANCHER_URL=\$RANCHER_URL\" \
+      --env \"RANCHER_ACCESS_KEY=\$RANCHER_ACCESS_KEY\" \
+      --env \"RANCHER_SECRET_KEY=\$RANCHER_SECRET_KEY\" \
+      --volume \"\$(pwd):/compose\" \
       zambon/rancher-compose:0.9.2"
     ```
 
